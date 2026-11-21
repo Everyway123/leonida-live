@@ -1,0 +1,22 @@
+{
+  "sources": {
+    "gta6map": {
+      "health": "ok",
+      "changed_at": "2026-11-21T15:17:38.545197+00:00",
+      "revision": "2e4a837210f627c5aed6b4159c46961efece17a2",
+      "landmarks": 696,
+      "landmarks_sha256": "8dc3eacdbbf61c57b2da96a4e98b4fbebef74555e7c615b4df3a75307fe287c9",
+      "overview_sha256": "14ed690598f3ed94fde6e90524c764c48b8eeca0227d60dbacf7d492aea7147f",
+      "last_success_at_change": "2026-11-21T15:17:38.545197+00:00"
+    },
+    "rockstar_newswire": {
+      "health": "ok",
+      "changed_at": "2026-11-21T15:18:20.860868+00:00",
+      "last_success_at_change": "2026-11-21T15:18:20.860868+00:00"
+    },
+    "reddit_gta6": {
+      "health": "unavailable",
+      "changed_at": "2026-11-21T15:16:43.593280+00:00"
+    }
+  }
+}

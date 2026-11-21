@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Каталог схованих пакунків",
+    "url": "https://www.gtabase.com/gta-6/map/?feature=hidden-packages",
+    "source": "gtabase",
+    "retrieved_at": "2026-11-21T15:18:20.709305+00:00",
+    "status": "candidate",
+    "scope": "guide"
+  },
+  {
+    "title": "Каталог сейфів",
+    "url": "https://www.gtabase.com/gta-6/map/?feature=safe",
+    "source": "gtabase",
+    "retrieved_at": "2026-11-21T15:18:20.709315+00:00",
+    "status": "candidate",
+    "scope": "guide"
+  }
+]

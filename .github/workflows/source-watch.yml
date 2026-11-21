@@ -1,0 +1,41 @@
+name: Check GTA VI public sources
+on:
+  schedule:
+    - cron: '0 8 * * *'
+      timezone: Europe/Lisbon
+    - cron: '0 14 * * *'
+      timezone: Europe/Lisbon
+    - cron: '0 20 * * *'
+      timezone: Europe/Lisbon
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  monitor:
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+    concurrency: leonida-source-watch
+    timeout-minutes: 8
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Monitor sources
+        id: monitor
+        continue-on-error: true
+        run: python3 scripts/source_watch.py
+      - name: Validate published data
+        run: python3 scripts/validate.py
+      - name: Publish changes
+        run: |
+          git add public/data public/assets review/candidates.json
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Update atlas source data'
+            git push origin HEAD:main
+          fi
+      - if: steps.monitor.outcome == 'failure'
+        run: exit 1
