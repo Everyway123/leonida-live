@@ -1,8 +1,8 @@
 {
   "sources": {
     "gta6map": {
-      "health": "ok",
-      "changed_at": "2026-11-21T15:17:38.545197+00:00",
+      "health": "unavailable",
+      "changed_at": "2026-11-24T20:10:17.798597+00:00",
       "revision": "2e4a837210f627c5aed6b4159c46961efece17a2",
       "landmarks": 696,
       "landmarks_sha256": "8dc3eacdbbf61c57b2da96a4e98b4fbebef74555e7c615b4df3a75307fe287c9",
